@@ -21,26 +21,31 @@ public class EX_09_Intercalacao {
         int[] v2 = leVetor(m);
          exibeVetor(v1);
          exibeVetor(v2);
-         int v3[] = new int[v1.length+v2.length];
-        intercala(v1, v2, v3);
-       
-        exibeVetor(v3);
-       
+        exibeVetor(intercala(v1, v2));
     }
     
-    public static void intercala(int[] v1,int[] v2,int v3[]){
-        int k=0,i=0,j=0;
-        while(k< v3.length){
-            if(i<=j){
+    public static int[] intercala(int[] v1,int[] v2){
+         int v3[] = new int[v1.length+v2.length];
+        int k=0,i=0,j=0,count =0;
+        while(i<v1.length && j<v2.length){
+            if(v1[i]< v2[j]){
                 v3[k++] = v1[i++];
-                
+                count++;
             }
             else{
                 v3[k++] = v2[j++];
-                
+                count ++;
             }
         }
-        
+         while(i<v1.length){
+            v3[k++] = v1[i++];
+            count++;
+             }
+             while(j<v2.length){
+            v3[k++] = v2[j++];
+            count++;
+             }
+    return v3;
         
     }
     
