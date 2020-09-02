@@ -22,13 +22,13 @@ public class EX_09_Intercalacao {
          exibeVetor(v1);
          exibeVetor(v2);
          int v3[] = new int[v1.length+v2.length];
-        System.out.println(intercala(v1, v2, v3));
-        System.out.println(v3.length);
+        intercala(v1, v2, v3);
+       
         exibeVetor(v3);
        
     }
     
-    public static int intercala(int[] v1,int[] v2,int v3[]){
+    public static void intercala(int[] v1,int[] v2,int v3[]){
         int k=0,i=0,j=0;
         while(k< v3.length){
             if(i<=j){
@@ -41,7 +41,7 @@ public class EX_09_Intercalacao {
             }
         }
         
-        return k;
+        
     }
     
 }
