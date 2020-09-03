@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Aula02_Lista;
+package Aula03_desempenho;
 
 import static Aula01_Vetores.EX_04_Inverter.exibeVetor;
 import static Aula01_Vetores.EX_04_Inverter.leInteiroPositivo;
