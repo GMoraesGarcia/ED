@@ -7,8 +7,8 @@ package Aula03_desempenho;
 
 import static Aula01_Vetores.EX_04_Inverter.exibeVetor;
 import static Aula01_Vetores.EX_04_Inverter.leInteiroPositivo;
-import static Aula01_Vetores.EX_04_Inverter.leVetor;
 import static Aula01_Vetores.EX_04_Inverter.leVetorAleatorio;
+import static Aula03_desempenho.EX_03_TrocarMaiorMenor.troca;
 
 /**
  *
@@ -26,24 +26,20 @@ public class EX_09_Rearranjar {
     }
 
     public static void rearranjar(int[] v) {
-        
+        int pivo = v[0];
         int i =1,j =v.length-1;
         while(i<=j){
-            if(v[i]>v[0] && v[j]<=v[0]){
-            int inter = v[i];
-            v[i] = v[j];
-            v[j] = inter;
+            if(v[i]>pivo && v[j]<=pivo){
+            troca(v,i,j);
             i++;j--;
             }
-            else if(v[j]>v[0]){
+            else if(v[j]>pivo){
                 j--;
             }
             else
                 i++;
         }
-        int n =v[0];
-        v[0] =v[j];
-        v[j] =n;
+        troca(v,0,j);
     }
     
 }
