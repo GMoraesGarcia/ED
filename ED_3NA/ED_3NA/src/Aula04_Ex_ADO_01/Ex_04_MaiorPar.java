@@ -8,7 +8,6 @@ package Aula04_Ex_ADO_01;
 import static Aula01_Vetores.EX_04_Inverter.exibeVetor;
 import static Aula01_Vetores.EX_04_Inverter.leInteiroPositivo;
 import static Aula01_Vetores.EX_04_Inverter.leVetorAleatorio;
-import static Aula03_desempenho.EX_03_TrocarMaiorMenor.trocaMaiorMenor;
 
 /**
  *
