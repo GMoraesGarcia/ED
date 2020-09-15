@@ -19,10 +19,12 @@ public class EX_12_FuncoesRecursivas {
        
         int v[] = leVetorAleatorio(a);
         exibeVetor(v);
-        // int b = leInteiroPositivo();
+        int b = leInteiroPositivo();
          
-        //System.out.println(mediaAritimetica(v, 0, 0));
-         System.out.println(MenorValor(v, 0, v[0]));
+         System.out.printf("%d Está na posição: " + BuscaLinear(v, b, 0),b);
+         System.out.println("\nMenor valor: " +MenorValor(v, 0, v[0]));
+         System.out.println("Soma dos valores:" +Soma(v, 0, 0));
+         System.out.printf("Média Aritimédica %.2f \n",mediaAritimetica(v, 0, 0));
     }
     public static int BuscaLinear(int v[],int n,int i){
         if(v[i] == n)
