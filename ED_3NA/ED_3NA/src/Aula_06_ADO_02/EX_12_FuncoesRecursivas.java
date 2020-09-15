@@ -21,8 +21,8 @@ public class EX_12_FuncoesRecursivas {
         exibeVetor(v);
         // int b = leInteiroPositivo();
          
-        System.out.println(MenorValor(v, 1));
-         //System.out.println(Soma(v, 0,0));
+        //System.out.println(mediaAritimetica(v, 0, 0));
+         System.out.println(MenorValor(v, 0, v[0]));
     }
     public static int BuscaLinear(int v[],int n,int i){
         if(v[i] == n)
@@ -39,16 +39,23 @@ public class EX_12_FuncoesRecursivas {
           return  Soma(v, i+1, n+v[i]);
     }
     
-    public static int MenorValor(int v[],int i){
-        int j =0;
+    public static int MenorValor(int v[],int i, int n){
         if (i == v.length)
-            return v[j];
-        if(MenorValor(v, i +1) < MenorValor(v, i))
-            j=i;
+            return n;
+        
+        if(MenorValor(v, i+1,v[i]) < n)
+            n = v[i];
       
-        return MenorValor(v, i+1);
+        return MenorValor(v, i+1,n);
         
         
+    }
+    public static double mediaAritimetica(int v[],int i,double n){
+    
+        if(i == v.length)
+            return n/i;
+        
+          return  mediaAritimetica(v, i+1, n+v[i]);
     }
     
 }
