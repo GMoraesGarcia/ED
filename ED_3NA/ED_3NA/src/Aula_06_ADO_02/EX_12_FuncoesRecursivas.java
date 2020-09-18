@@ -29,6 +29,8 @@ public class EX_12_FuncoesRecursivas {
     public static int BuscaLinear(int v[],int n,int i){
         if(v[i] == n)
             return i;
+        if(v[v.length-1] != n)
+            return -1;
         
         return BuscaLinear(v, n, i+1);
     }
