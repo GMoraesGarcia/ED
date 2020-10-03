@@ -25,11 +25,18 @@ public class teste {
         list2.insereOrdenado(40);
         list2.insereOrdenado(50);
         list2.insereOrdenado(70);
-        
-        Ex_ListaEncadeada ls = new Ex_ListaEncadeada();
+        list2.insereOrdenado(30);
+        list2.insereOrdenado(10);
        
         
-        System.out.println( ls.intercalacao(list1, list2)); 
+        
+        Ex_ListaEncadeada ls = new Ex_ListaEncadeada();
+       System.out.println(list1);
+        System.out.println(list2);
+        ls = list1.intercalacao(list2);
+        
+        System.out.println(ls);
+        
    }
     
 }
