@@ -33,8 +33,7 @@ public class teste {
         Ex_ListaEncadeada ls = new Ex_ListaEncadeada();
        System.out.println(list1);
         System.out.println(list2);
-        ls = list1.intercalacao(list2);
-        
+        ls = list1.uniao(list2);
         System.out.println(ls);
         
    }

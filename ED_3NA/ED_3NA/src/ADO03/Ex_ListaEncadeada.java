@@ -9,7 +9,7 @@ import Aula_06_ADO_02.No;
 
 
 /**
- *  10) Intercalação de duas listas ordenadas com menor complexidade
+ *  10) Intercalação de duas listas ordenadas com menor complexidade -- Feito
 
     11) União de duas listas quaisquer
 
@@ -32,9 +32,7 @@ public class Ex_ListaEncadeada {
        
         No lis1 = lst1.ini;
         No lis2 = ini;
-        
-       
-        
+ 
         while(lis1 != null && lis2 != null){
             
             if(lis1.getElemento() <= lis2.getElemento()){
@@ -58,6 +56,25 @@ public class Ex_ListaEncadeada {
             }
     
         return list3;
+    }
+    
+    public Ex_ListaEncadeada uniao(Ex_ListaEncadeada list){
+        Ex_ListaEncadeada l3 = new Ex_ListaEncadeada();
+        No l= ini;
+        No l2 = list.ini;
+        
+        while(l != null){
+            l3.insereFinal(l.getElemento());
+            l = l.getProx();
+            if(l == null){
+                while(l2 != null){
+                    l3.insereFinal(l2.getElemento());
+                    l2 = l2.getProx();
+               } 
+            }
+        }
+    
+       return l3;
     }
    public void insereFinal(int elemento){
         No novo = new No(elemento, null);
