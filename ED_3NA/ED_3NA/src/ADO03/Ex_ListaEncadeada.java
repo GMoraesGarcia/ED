@@ -76,6 +76,26 @@ public class Ex_ListaEncadeada {
     
        return l3;
     }
+    public Ex_ListaEncadeada Interseccao(Ex_ListaEncadeada l){
+        Ex_ListaEncadeada lista = new Ex_ListaEncadeada();
+        No temp = ini;
+        No list = l.ini;
+    
+        while(temp != null ){
+            while(list != null){
+                if(temp.getElemento() == list.getElemento()){
+                    lista.insereOrdenado(temp.getElemento());
+                    temp = temp.getProx();  list = list.getProx();
+                }
+                else
+                    list = list.getProx();
+            }
+          list = l.ini;  
+          temp = temp.getProx();
+        }
+        
+        return lista;
+    }
    public void insereFinal(int elemento){
         No novo = new No(elemento, null);
         No temp = ini;

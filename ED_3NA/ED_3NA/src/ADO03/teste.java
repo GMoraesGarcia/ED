@@ -26,14 +26,14 @@ public class teste {
         list2.insereOrdenado(50);
         list2.insereOrdenado(70);
         list2.insereOrdenado(30);
-        list2.insereOrdenado(10);
+        list2.insereOrdenado(0);
        
         
         
         Ex_ListaEncadeada ls = new Ex_ListaEncadeada();
        System.out.println(list1);
         System.out.println(list2);
-        ls = list1.uniao(list2);
+        ls = list1.Interseccao(list2);
         System.out.println(ls);
         
    }
