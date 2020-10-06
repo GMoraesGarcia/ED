@@ -27,6 +27,7 @@ public class teste {
         list2.insereOrdenado(70);
         list2.insereOrdenado(30);
         list2.insereOrdenado(0);
+        list2.insereOrdenado(20);
        
         
         

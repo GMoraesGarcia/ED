@@ -85,7 +85,7 @@ public class Ex_ListaEncadeada {
             while(list != null){
                 if(temp.getElemento() == list.getElemento()){
                     lista.insereOrdenado(temp.getElemento());
-                    temp = temp.getProx();  list = list.getProx();
+                    list = list.getProx();
                 }
                 else
                     list = list.getProx();
