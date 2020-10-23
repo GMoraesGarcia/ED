@@ -32,10 +32,14 @@ public class teste {
         
         
         Ex_ListaEncadeada ls = new Ex_ListaEncadeada();
-       System.out.println(list1);
+        System.out.println(list1);
         System.out.println(list2);
+        ls = list1.intercalacao(list2);
+        System.out.println("Intercalação: "+ls);
+        ls = list1.uniao(list2);
+        System.out.println("União: "+ls);
         ls = list1.Interseccao(list2);
-        System.out.println(ls);
+        System.out.println("intersecção: "+ls);
         
    }
     

@@ -66,12 +66,12 @@ public class Ex_ListaEncadeada {
         while(l != null){
             l3.insereFinal(l.getElemento());
             l = l.getProx();
-            if(l == null){
-                while(l2 != null){
-                    l3.insereFinal(l2.getElemento());
-                    l2 = l2.getProx();
-               } 
-            }
+        }
+        if(l == null){
+            while(l2 != null){
+                l3.insereFinal(l2.getElemento());
+                l2 = l2.getProx();
+            } 
         }
     
        return l3;
@@ -90,10 +90,10 @@ public class Ex_ListaEncadeada {
                 else
                     list = list.getProx();
             }
-          list = l.ini;  
+          
           temp = temp.getProx();
+          list = l.ini;  
         }
-        
         return lista;
     }
    public void insereFinal(int elemento){
