@@ -29,11 +29,14 @@ public class ExemploMvc extends HttpServlet {
        String ua = request.getHeader("User-Agent");
        LocalDateTime dataHora = LocalDateTime.now();
        
+       //String [] interesses = new String[] {"Esportes", "Comida", "Balada"};
+       
        dados dad = new dados();
        dad.setNome("loco");
        dad.setDataNascimento(LocalDate.of(2000, 03, 20));
        dad.setPeso(new BigDecimal(90.3));
        dad.setAltura(new BigDecimal(1.80));
+      // dad.setInteresses(interesses);
        
        request.setAttribute("uaAttr", ua);
        request.setAttribute("dataHoraAttr", dataHora);
